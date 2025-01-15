@@ -1,0 +1,182 @@
+/* General Reset for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* This ensures that padding and border don't mess up the layout */
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;  /* Sets a default font */
+  line-height: 1.6;  /* Makes text more readable */
+  background-color: #f4f4f4;  /* Light grey background */
+  padding: 0 20px;  /* Adds padding to the sides */
+  color: #333;  /* Default text color */
+}
+
+/* Header styling */
+header {
+  background-color: #333333;  /* Dark background for the header */
+  color: #ffffff;  /* White text color */
+  padding: 10px 0;  /* Padding for space around the text */
+  text-align: center;  /* Centers the text inside the header */
+  width: 100%;  /* Ensures the header spans the full width */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Optional: Adds shadow under header */
+}
+
+/* Navigation Menu styling */
+nav ul {
+  list-style: none;  /* Removes bullets from list */
+  padding: 0;  /* Removes extra padding */
+}
+
+nav ul li {
+  display: inline;  /* Displays items in a row */
+  margin-right: 20px;  /* Space between items */
+}
+
+nav ul li a {
+  color: #fff;  /* White color for links */
+  text-decoration: none;  /* Removes underline from links */
+  font-weight: bold;  /* Makes the text bold */
+}
+
+/* Section headings */
+h1 {
+  text-align: center;  /* Centers the main heading */
+  font-size: 2.5rem;  /* Larger font size */
+  margin-top: 30px;  /* Adds space above the heading */
+}
+
+h2 {
+  font-size: 2rem;  /* Slightly smaller font size */
+  margin-bottom: 20px;  /* Adds space below the heading */
+}
+
+/* Section Styling */
+section {
+  margin: 50px 0;  /* Adds space above and below each section */
+}
+
+/* Timeline container */
+.timeline {
+  position: relative;  /* For positioning the line in the center */
+  max-width: 1200px;  /* Maximum width of the timeline */
+  margin: 0 auto;  /* Centers the timeline horizontally */
+}
+
+/* Timeline line styling */
+.timeline::before {
+  content: "";  /* Adds a line before the timeline items */
+  position: absolute;  /* Absolutely positioned in the container */
+  width: 2px;  /* Line width */
+  background: #007bff;  /* Line color */
+  left: 50%;  /* Centers the line horizontally */
+  height: 100%;  /* Makes the line as tall as the container */
+  transform: translateX(-50%);  /* Ensures it is perfectly centered */
+}
+
+/* Timeline items styling */
+.timeline-item {
+  display: flex;  /* Displays each item in a row */
+  justify-content: flex-start;  /* Aligns the items to the start */
+  margin-bottom: 30px;  /* Adds space between items */
+  position: relative;  /* For absolute positioning of inner elements */
+}
+
+.timeline-item.left {
+  flex-direction: row-reverse;  /* Reverses the order for left items */
+}
+
+.timeline-item.right {
+  flex-direction: row;  /* Keeps the order for right items */
+}
+
+/* Timeline content box styling */
+.timeline-item .timeline-content {
+  background-color: #fff;  /* White background for content */
+  padding: 20px;  /* Padding inside the box */
+  border-radius: 10px;  /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Shadow around the box */
+  width: 45%;  /* Box takes up 45% of the container width */
+  position: relative;  /* For absolute positioning of the date */
+}
+
+/* Timeline content heading styling */
+.timeline-item .timeline-content h3 {
+  font-size: 1.3rem;  /* Font size for the title */
+  font-weight: bold;  /* Makes the title bold */
+}
+
+/* Timeline content description styling */
+.timeline-item .timeline-content p {
+  font-size: 1rem;  /* Default font size for the description */
+  color: #666;  /* Grey text color */
+}
+
+/* Date styling */
+.date {
+  font-size: 0.9rem;  /* Smaller font size for date */
+  color: #777;  /* Light grey color */
+  margin-top: 10px;  /* Adds space above the date */
+}
+
+/* Contact section styling */
+.contact-info {
+  display: grid;  /* Uses grid for layout */
+  grid-template-columns: 1fr 1fr;  /* Two equal-width columns */
+  gap: 20px;  /* Adds space between columns */
+  margin-top: 30px;  /* Adds space above the contact section */
+}
+
+.contact-item {
+  background-color: #fff;  /* White background for each contact item */
+  padding: 20px;  /* Padding inside the contact box */
+  border-radius: 10px;  /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Shadow around the box */
+}
+
+/* Contact heading styling */
+.contact-item h3 {
+  font-size: 1.3rem;  /* Font size for each contact title */
+  color: #007bff;  /* Blue color for headings */
+  margin-bottom: 10px;  /* Adds space below the heading */
+}
+
+/* Contact paragraph styling */
+.contact-item p {
+  font-size: 1.1rem;  /* Slightly larger font size for the text */
+  color: #555;  /* Dark grey text color */
+}
+
+/* Link styling */
+.contact-item a {
+  text-decoration: none;  /* Removes underline from links */
+  color: #007bff;  /* Blue color for links */
+}
+
+.contact-item a:hover {
+  text-decoration: underline;  /* Underlines the link on hover */
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+  .timeline {
+    padding-left: 20px;  /* Adds space on smaller screens */
+    padding-right: 20px;  /* Adds space on smaller screens */
+  }
+
+  .timeline-item .timeline-content {
+    width: 100%;  /* Makes the timeline content full width on small screens */
+    margin-left: 0;  /* Removes extra margins */
+    margin-right: 0;  /* Removes extra margins */
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
